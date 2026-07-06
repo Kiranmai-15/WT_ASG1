@@ -1,0 +1,221 @@
+```css
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* CSS Variables */
+:root{
+    --primary:#4F46E5;
+    --secondary:#7C3AED;
+    --accent:#06B6D4;
+    --background:#F8FAFC;
+    --card:#FFFFFF;
+    --text:#1F2937;
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:var(--text);
+}
+
+/* Navigation */
+nav{
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,0.95);
+    display:flex;
+    justify-content:center;
+    padding:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+    z-index:100;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--accent);
+    text-decoration:underline;
+}
+
+/* Sections */
+section{
+    padding:60px 8%;
+}
+
+/* Hero */
+#home{
+    text-align:center;
+    color:white;
+}
+
+#home img{
+    width:160px;
+    border-radius:50%;
+    margin-top:20px;
+}
+
+/* Flex Layout */
+.skills{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.box{
+    flex:1;
+    min-width:250px;
+}
+
+/* Project Grid */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* Cards */
+.card,
+.box{
+    background:var(--card);
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:all .3s ease;
+}
+
+.card:hover,
+.box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* Buttons */
+button,
+.card a{
+    display:inline-block;
+    margin-top:15px;
+    background:var(--primary);
+    color:white;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    text-decoration:none;
+    transition:all .3s ease;
+    cursor:pointer;
+}
+
+button:hover,
+.card a:hover{
+    background:var(--accent);
+    transform:translateY(-3px);
+}
+
+/* Form */
+form{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+    border-color:var(--accent);
+    box-shadow:0 0 8px rgba(6,182,212,.5);
+}
+
+/* Skill Progress Bars */
+.progress{
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin:10px 0;
+}
+
+.progress span{
+    display:block;
+    height:10px;
+    background:var(--accent);
+}
+
+.html{width:95%;}
+.css{width:90%;}
+.java{width:85%;}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+section{
+    animation:fadeIn .8s ease;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:white;
+}
+
+/* Responsive Design */
+@media(max-width:768px){
+
+nav ul{
+    flex-direction:column;
+    align-items:center;
+}
+
+.skills{
+    flex-direction:column;
+}
+
+.projects{
+    grid-template-columns:1fr;
+}
+
+form{
+    width:100%;
+}
+
+}
+```
