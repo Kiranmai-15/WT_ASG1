@@ -1,19 +1,25 @@
 /* ==========================================
-   1. Theme Setup & Color Variables
+   1. Theme System Setup (Light Aesthetic UI)
    ========================================== */
 :root {
-    --bg-universe: #060214; 
-    --panel-bg: rgba(20, 12, 43, 0.45); 
-    --panel-border: rgba(255, 255, 255, 0.08);
+    --bg-light: #f4f7fc;
+    --panel-bg: rgba(255, 255, 255, 0.75);
+    --panel-border: rgba(255, 255, 255, 0.6);
+    --panel-shadow: 0 12px 35px rgba(31, 55, 124, 0.05);
     
-    --neon-pink: #ff2a85;
-    --neon-purple: #9d4edd;
-    --neon-cyan: #00f0ff;
-    --text-pure: #ffffff;
-    --text-stardust: #b3a9cf;
+    /* Popping UI Palette */
+    --text-main: #0c142e;
+    --text-muted: #5c6885;
+    --nav-blue: #4055b2;
     
-    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
-    --panel-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Vibrant Bullets */
+    --bullet-pink: #ff4794;
+    --bullet-purple: #a855f7;
+    --bullet-cyan: #06b6d4;
+    --bullet-blue: #3b82f6;
+    --bullet-violet: #6366f1;
+    
+    --font-main: 'Plus Jakarta Sans', sans-serif;
 }
 
 * {
@@ -22,76 +28,48 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    background-color: var(--bg-universe);
-}
-
 body {
-    font-family: var(--font-jakarta);
-    background-color: var(--bg-universe);
-    color: var(--text-pure);
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-main);
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-/* Ambient Animated Background Mesh */
-.aurora-orb {
+/* Background Soft Blur Layers */
+.light-orb {
     position: fixed;
-    width: 550px;
-    height: 550px;
     border-radius: 50%;
     z-index: -1;
-    filter: blur(130px);
-    opacity: 0.18;
+    filter: blur(90px);
+    opacity: 0.45;
     pointer-events: none;
 }
-.orb-purple { top: -10%; left: -5%; background: var(--neon-purple); animation: pulse 14s infinite alternate ease-in-out; }
-.orb-pink { bottom: 5%; right: -10%; background: var(--neon-pink); animation: pulse 18s infinite alternate-reverse ease-in-out; }
-
-@keyframes pulse {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(40px, -50px) scale(1.15); }
-}
+.orb-1 { top: -5%; right: 10%; width: 400px; height: 400px; background: rgba(255, 71, 148, 0.25); }
+.orb-2 { top: 30%; left: 10%; width: 500px; height: 500px; background: rgba(6, 182, 212, 0.2); }
+.orb-3 { bottom: 5%; right: 20%; width: 350px; height: 350px; background: rgba(168, 85, 247, 0.2); }
 
 .section-container {
     width: 90%;
-    max-width: 1140px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 90px 0;
-}
-
-.panel {
-    background: var(--panel-bg);
-    border: 1px solid var(--panel-border);
-    border-radius: 24px;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-h2.section-title-center {
-    font-size: 2.6rem;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 50px;
-    background: linear-gradient(135deg, var(--text-pure) 30%, var(--neon-pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 /* ==========================================
-   2. Top Bar Navigation & College Logo Styling
+   2. Navbar Styling
    ========================================== */
-.glass-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(6, 2, 20, 0.75);
+.navbar {
+    position: sticky;
+    top: 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto 40px auto;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--panel-border);
+    box-shadow: var(--panel-shadow);
     z-index: 1000;
 }
 
@@ -99,241 +77,272 @@ h2.section-title-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1140px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 12px 0;
+    padding: 10px 24px;
 }
 
-.brand-block {
+.brand-side {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
-/* College Logo on Top Left Corner */
-.nav-college-logo {
-    height: 45px;
+.college-logo {
+    height: 32px;  /* Small image matching top corner rule */
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
 }
 
-.logo {
-    font-size: 1.5rem;
+.logo-text {
+    font-size: 1.3rem;
     font-weight: 800;
-    color: var(--text-pure);
-    text-decoration: none;
+    color: var(--text-main);
     letter-spacing: -0.5px;
 }
 
-.logo span { color: var(--neon-pink); }
+.logo-text span { color: var(--bullet-pink); }
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 30px;
     list-style: none;
 }
 
 .nav-links a {
-    color: var(--text-stardust);
+    color: var(--text-muted);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.95rem;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 
-.nav-links a:hover { color: var(--text-pure); }
+.nav-links a:hover, .nav-links a.active {
+    color: var(--nav-blue);
+}
 
 /* ==========================================
-   3. Hero Arena & Profile Photo Frame
+   3. Main Dashboard Panels (Hero / Split View)
    ========================================== */
-.hero-panel {
-    min-height: 100vh;
+.hero-dashboard {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.dashboard-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--panel-shadow);
+}
+
+/* Left Specialization Bullet Panel */
+.left-panel {
+    padding: 40px 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 130px;
 }
 
-.profile-container {
-    position: relative;
-    width: 160px;
-    height: 160px;
-    margin: 0 auto 25px;
+.popping-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
-.profile-ring {
-    width: 100%;
-    height: 100%;
+.popping-bullets li {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.bullet-dot {
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    padding: 4px;
-    background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple), var(--neon-cyan));
-    box-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+    display: inline-block;
+}
+.pink-dot { background: var(--bullet-pink); box-shadow: 0 0 12px var(--bullet-pink); }
+.purple-dot { background: var(--bullet-purple); box-shadow: 0 0 12px var(--bullet-purple); }
+.cyan-dot { background: var(--bullet-cyan); box-shadow: 0 0 12px var(--bullet-cyan); }
+.blue-dot { background: var(--bullet-blue); box-shadow: 0 0 12px var(--bullet-blue); }
+.violet-dot { background: var(--bullet-violet); box-shadow: 0 0 12px var(--bullet-violet); }
+
+/* Right Profile Side Card */
+.right-panel {
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.profile-photo {
+.profile-frame {
+    width: 100px; /* Perfectly small profile size */
+    height: 100px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--bullet-cyan), var(--bullet-blue));
+    margin-bottom: 16px;
+}
+
+.profile-img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    background: #140c2b; 
-    display: block;
 }
 
-.cyber-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    background: rgba(255, 42, 133, 0.08);
-    border: 1px solid rgba(255, 42, 133, 0.25);
-    color: #ff7ebb;
-    border-radius: 50px;
-    font-size: 0.85rem;
+.right-panel h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }
+.profile-sub { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-bottom: 12px; }
+
+.specialized-pill {
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: #fff;
+    font-size: 0.75rem;
     font-weight: 700;
-    margin-bottom: 25px;
+    padding: 5px 16px;
+    border-radius: 20px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
 }
 
-.hero-panel h1 {
-    font-size: 4.2rem;
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -2px;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--text-pure) 40%, var(--neon-purple) 75%, var(--neon-cyan));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--neon-cyan);
-    margin-bottom: 20px;
-}
-
-.hero-tagline {
-    font-size: 1.15rem;
-    color: var(--text-stardust);
-    max-width: 750px;
-    margin: 0 auto 40px;
-    font-weight: 300;
-}
+.right-panel .tagline { font-size: 0.95rem; color: var(--text-muted); font-weight: 400; max-width: 200px; }
 
 /* ==========================================
-   4. Asymmetric Skill Matrix Grid Layout
+   4. Skills Grid Area
    ========================================== */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+.grid-section-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
 
-.skill-card {
-    padding: 30px;
+.skills-row-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.skill-mini-card {
     background: var(--panel-bg);
     border: 1px solid var(--panel-border);
-    border-radius: 20px;
-    transition: var(--panel-transition);
+    padding: 20px 16px;
+    border-radius: 16px;
+    box-shadow: var(--panel-shadow);
 }
 
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-}
-
-.skill-info {
+.skill-header-line {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    gap: 8px;
+    margin-bottom: 6px;
 }
 
-.skill-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: -0.3px;
+.mini-dot { width: 8px; height: 8px; border-radius: 50%; }
+.color-1 { background: var(--bullet-purple); }
+.color-2 { background: var(--bullet-pink); }
+.color-3 { background: var(--bullet-cyan); }
+.color-4 { background: var(--bullet-blue); }
+.color-5 { background: var(--bullet-violet); }
+.color-6 { background: #10b981; }
+
+.skill-mini-card h4 { font-size: 1.1rem; font-weight: 700; }
+.rating-txt { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+
+/* ==========================================
+   5. Bottom Column Split (Projects & Contact)
+   ========================================== */
+.split-layout-bottom {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    padding-bottom: 80px;
 }
 
-.skill-rating {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--neon-cyan);
-    background: rgba(0, 240, 255, 0.07);
-    padding: 2px 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 240, 255, 0.15);
+.projects-column, .contact-column {
+    display: flex;
+    flex-direction: column;
 }
 
-.progress-track {
+.project-item-card {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: var(--panel-shadow);
+}
+
+.project-item-card h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.project-item-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* Contact Form Box Styling */
+.contact-panel-box {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: var(--panel-shadow);
+    flex-grow: 1;
+}
+
+.contact-panel-box form { display: flex; flex-direction: column; gap: 14px; }
+
+.contact-panel-box input, .contact-panel-box textarea {
     width: 100%;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 14px;
     border-radius: 10px;
-    overflow: hidden;
-    position: relative;
+    font-family: var(--font-main);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
 }
 
-.progress-fill {
-    height: 100%;
+.contact-panel-box input:focus, .contact-panel-box textarea:focus {
+    outline: none;
+    border-color: var(--nav-blue);
+}
+
+.contact-panel-box button {
+    background: var(--nav-blue);
+    color: #fff;
+    border: none;
+    padding: 14px;
     border-radius: 10px;
-    background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
 }
 
-.skill-card.soft-metric .skill-rating {
-    color: var(--neon-pink);
-    background: rgba(255, 42, 133, 0.07);
-    border-color: rgba(255, 42, 133, 0.15);
-}
-.skill-card.soft-metric .progress-fill {
-    background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink));
-}
+.contact-panel-box button:hover { opacity: 0.9; }
 
-/* ==========================================
-   5. Interactive Contact Blueprint Form
-   ========================================== */
-.form-panel { padding: 50px; max-width: 800px; margin: 0 auto; border-right: 5px solid var(--neon-cyan); }
-.form-panel h2 { font-size: 2rem; margin-bottom: 35px; font-weight: 800; }
-.form-row-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-.input-container { display: flex; flex-direction: column; margin-bottom: 25px; }
-.input-container label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px; color: var(--text-stardust); }
-
-.input-container input, .input-container textarea {
-    background: rgba(5, 2, 15, 0.5); border: 1px solid var(--panel-border);
-    padding: 16px; border-radius: 12px; color: var(--text-pure); font-family: var(--font-jakarta);
-    font-size: 1rem; transition: var(--panel-transition);
-}
-
-.input-container input:focus, .input-container textarea:focus {
-    outline: none; border-color: var(--neon-pink); box-shadow: 0 0 25px rgba(255, 42, 133, 0.2); background: rgba(20, 12, 43, 0.8);
-}
-
-.panel-submit-btn {
-    width: 100%; background: var(--text-pure); color: var(--bg-universe); border: none;
-    padding: 18px; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: var(--panel-transition);
-}
-
-.panel-submit-btn:hover {
-    background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan)); color: var(--text-pure);
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.4); transform: translateY(-2px);
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* ==========================================
-   6. Footer Setup
+   6. Responsive Layout Adjustments
    ========================================== */
-footer { border-top: 1px solid var(--panel-border); padding: 50px 0; background: #04010d; text-align: center; }
-.footer-panel-container { max-width: 1140px; width: 90%; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
-.footer-contact-info a { color: var(--neon-cyan); text-decoration: none; }
-
-/* ==========================================
-   7. Mobile Responsive Logic
-   ========================================== */
-@media (max-width: 768px) {
-    .nav-container { flex-direction: column; gap: 15px; }
-    .nav-links { gap: 20px; }
-    .hero-panel h1 { font-size: 2.8rem; }
-    .skills-grid, .form-row-2col { grid-template-columns: 1fr; }
-    .form-panel { padding: 30px; }
+@media (max-width: 850px) {
+    .hero-dashboard, .split-layout-bottom {
+        grid-template-columns: 1fr;
+    }
+    .popping-bullets li { font-size: 1.3rem; }
 }
