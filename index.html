@@ -1,96 +1,271 @@
+```html
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | Kiranmai Gangotree Yellapu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiranmai Gangotree Yellapu | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-  <nav>
-    <a href="#home" class="nav-logo">
-      <img src="logo.png" alt="ANITS Logo">
-      <span class="nav-title">ANITS</span>
-    </a>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <main class="container">
-    
+    <!-- Navigation Bar -->
+    <nav>
+
+        <div class="logo">
+
+            <img src="logo.png" alt="ANITS Logo">
+
+            <div>
+                <h3>ANITS</h3>
+                <p>Anil Neerukonda Institute of Technology and Sciences</p>
+            </div>
+
+        </div>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+
     <section id="home" class="hero">
-      <div class="hero-text">
-        <span class="intro">Hi There, I'm</span>
-        <h1>Kiranmai Gangotree Yellapu</h1>
-        <p class="hero-subtitle">I am a passionate 3rd-year IT student specializing in modern web development and data-driven solutions.</p>
-        <a href="#contact" class="btn">Get In Touch</a>
-      </div>
-      <div class="hero-photo">
-        <img src="profile.jpg" alt="Profile photo of Kiranmai Gangotree Yellapu">
-      </div>
+
+        <div class="hero-content">
+
+            <h4>Hello, I'm</h4>
+
+            <h1>Kiranmai Gangotree Yellapu</h1>
+
+            <h3>Information Technology Student</h3>
+
+            <p>
+                Specialization in <strong>Data Warehouse and Data Mining</strong>.
+                Passionate about Web Development, UI Design and building
+                user-friendly applications.
+            </p>
+
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="profile.jpg" alt="Kiranmai Gangotree Yellapu">
+
+        </div>
+
     </section>
 
-    <section id="about" class="about-section">
-      <h2>About Me</h2>
-      <p>
-        Hello! I am Kiranmai Gangotree Yellapu, a driven student currently pursuing my <strong>3rd Year Bachelor of Technology</strong>
-        in <strong>Information Technology</strong> at ANITS. My academic and technical focus is heavily specialized in 
-        <strong>Data Mining and Data Warehousing</strong>, exploring how complex datasets can be structured and mined to reveal meaningful patterns.
-      </p>
-      <p>
-        Beyond my analytical data interests, I am captivated by turning structural logic into beautiful, intuitive user experiences. I actively look to blend backend data engineering workflows with modern front-end design elements.
-      </p>
-    </section>
+    <!-- About -->
 
-    <section id="skills" class="skills-section">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Data Mining</li>
-        <li>Data Warehousing</li>
-        <li>SQL & Databases</li>
-        <li>HTML5 & CSS3</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Bootstrap</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section>
+    <section id="about">
 
-    <section id="projects" class="projects-section">
-      <h2>Projects</h2>
-      <div class="card">
-        <h3>Virtual Placement Cell</h3>
+        <h2>About Me</h2>
+
         <p>
-          A user-friendly platform that takes the stress out of campus recruiting by keeping job alerts, resumes, and interview schedules all in one place, making it easier for students to connect with employers and land great jobs.
+
+            Hello! I'm <strong>Kiranmai Gangotree Yellapu</strong>,
+            currently pursuing my Bachelor of Technology in
+            <strong>Information Technology</strong> at
+            <strong>Anil Neerukonda Institute of Technology and Sciences (ANITS)</strong>.
+
         </p>
-        <a href="#" class="btn-secondary">View Project</a>
-      </div>
+
+        <p>
+
+            My academic specialization is
+            <mark>Data Warehouse and Data Mining</mark>.
+            I enjoy learning emerging technologies, developing responsive
+            websites, and improving my programming skills through projects.
+
+        </p>
+
+        <p>
+
+            My goal is to become a skilled software professional
+            by continuously learning, solving real-world problems,
+            and creating innovative digital solutions.
+
+        </p>
+
     </section>
 
-    <section id="contact" class="contact-section">
-      <h2>Contact Me</h2>
-      <form action="#" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message..." required></textarea>
-        
-        <button type="submit">Send Message</button>
-      </form>
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>Technical & Soft Skills</h2>
+
+        <div class="skills">
+
+            <div class="box">
+
+                <h3>Technical Skills</h3>
+
+                <ul>
+
+                    <li>HTML5</li>
+
+                    <li>CSS3</li>
+
+                    <li>Python</li>
+
+                    <li>Java</li>
+
+                    <li>C Programming</li>
+
+                    <li>SQL</li>
+
+                    <li>Git & GitHub</li>
+
+                </ul>
+
+            </div>
+
+            <div class="box">
+
+                <h3>Soft Skills</h3>
+
+                <ul>
+
+                    <li>Communication</li>
+
+                    <li>Leadership</li>
+
+                    <li>Problem Solving</li>
+
+                    <li>Creativity</li>
+
+                    <li>Time Management</li>
+
+                    <li>Team Work</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
     </section>
 
-  </main>
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+
+                <h3>Mind Controlled Home Automation</h3>
+
+                <p>
+
+                    Developed a Brain Computer Interface based system
+                    to control electrical appliances using EEG signals.
+
+                </p>
+
+                <a href="#" class="project-btn">View Project</a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>
+
+                    Designed and developed a responsive portfolio website
+                    using HTML5 and CSS3.
+
+                </p>
+
+                <a href="#" class="project-btn">View Project</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <label>Name</label>
+
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email</label>
+
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Phone</label>
+
+            <input type="tel" placeholder="Enter your phone number">
+
+            <label>Message</label>
+
+            <textarea rows="5" placeholder="Write your message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Kiranmai Gangotree Yellapu |
+            Information Technology | ANITS
+
+        </p>
+
+        <div class="social">
+
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+
+            <a href="https://github.com" target="_blank">GitHub</a>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
+```
