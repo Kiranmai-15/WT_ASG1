@@ -6,135 +6,111 @@
     <title>Kiranmai Gangotree Yellapu | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="aurora-orb orb-purple"></div>
-    <div class="aurora-orb orb-pink"></div>
+    <div class="light-orb orb-1"></div>
+    <div class="light-orb orb-2"></div>
+    <div class="light-orb orb-3"></div>
 
-    <nav class="glass-navbar">
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="brand-block">
-                <img src="https://anits.edu.in/images/logo.png" alt="ANITS Logo" class="nav-college-logo">
-                <a href="#home" class="logo">KGY<span>.</span></a>
+            <div class="brand-side">
+                <img src="https://anits.edu.in/images/logo.png" alt="ANITS" class="college-logo">
+                <span class="logo-text">KGY<span>.</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <header id="home" class="hero-panel">
-        <div class="hero-content">
-            
-            <div class="profile-container">
-                <div class="profile-ring">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Kiranmai Gangotree Yellapu" class="profile-photo">
-                </div>
-            </div>
-
-            <div class="cyber-badge">✨ Data Mining & Warehousing Specialization</div>
-            <h1>Kiranmai Gangotree Yellapu</h1>
-            <p class="hero-subtitle">III B.Tech Information Technology | ANITS</p>
-            <p class="hero-tagline">Architecting intelligent data pipelines, extracting hidden patterns, and designing highly responsive visual interfaces.</p>
+    <main id="home" class="hero-dashboard section-container">
+        <div class="dashboard-panel left-panel">
+            <ul class="popping-bullets">
+                <li><span class="bullet-dot pink-dot"></span> Data Mining</li>
+                <li><span class="bullet-dot purple-dot"></span> Warehousing Specialization</li>
+                <li><span class="bullet-dot cyan-dot"></span> Pattern Extraction</li>
+                <li><span class="bullet-dot blue-dot"></span> OLAP Cubes</li>
+                <li><span class="bullet-dot violet-dot"></span> Predictive Analytics</li>
+            </ul>
         </div>
-    </header>
+
+        <div class="dashboard-panel right-panel">
+            <div class="profile-frame">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="Kiranmai" class="profile-img">
+            </div>
+            <h2>Kiranmai</h2>
+            <p class="profile-sub">III B.Tech IT, ANITS</p>
+            <span class="specialized-pill">Specialized</span>
+            <p class="tagline">Extracting knowledge from data frameworks.</p>
+        </div>
+    </main>
 
     <section id="skills" class="section-container">
-        <h2 class="section-title-center">Skill Diagnostics Matrix</h2>
-        
-        <div class="skills-grid">
-            <div class="panel skill-card">
-                <div class="skill-info">
-                    <span class="skill-name">Java Architecture</span>
-                    <span class="skill-rating">8.5 / 10</span>
-                </div>
-                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+        <h3 class="grid-section-title">Skills</h3>
+        <div class="skills-row-grid">
+            <div class="skill-mini-card">
+                <div class="skill-header-line"><span class="mini-dot color-1"></span> <h4>Java</h4></div>
+                <span class="rating-txt">8.5 Rating</span>
             </div>
-
-            <div class="panel skill-card">
-                <div class="skill-info">
-                    <span class="skill-name">C++ Programming</span>
-                    <span class="skill-rating">8.0 / 10</span>
-                </div>
-                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+            <div class="skill-mini-card">
+                <div class="skill-header-line"><span class="mini-dot color-2"></span> <h4>C++</h4></div>
+                <span class="rating-txt">8.0 Rating</span>
             </div>
-
-            <div class="panel skill-card">
-                <div class="skill-info">
-                    <span class="skill-name">Core C</span>
-                    <span class="skill-rating">9.0 / 10</span>
-                </div>
-                <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+            <div class="skill-mini-card">
+                <div class="skill-header-line"><span class="mini-dot color-3"></span> <h4>C</h4></div>
+                <span class="rating-txt">9.0 Rating</span>
             </div>
-
-            <div class="panel skill-card">
-                <div class="skill-info">
-                    <span class="skill-name">Data Structures (DSA)</span>
-                    <span class="skill-rating">8.5 / 10</span>
-                </div>
-                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+            <div class="skill-mini-card">
+                <div class="skill-header-line"><span class="mini-dot color-4"></span> <h4>DSA</h4></div>
+                <span class="rating-txt">8.5 Rating</span>
             </div>
-
-            <div class="panel skill-card">
-                <div class="skill-info">
-                    <span class="skill-name">Advanced Data Structures (ADS)</span>
-                    <span class="skill-rating">8.0 / 10</span>
-                </div>
-                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+            <div class="skill-mini-card">
+                <div class="skill-header-line"><span class="mini-dot color-5"></span> <h4>ADS</h4></div>
+                <span class="rating-txt">8.0 Rating</span>
             </div>
-
-            <div class="panel skill-card soft-metric">
-                <div class="skill-info">
-                    <span class="skill-name">Interpersonal Communication</span>
-                    <span class="skill-rating">9.2 / 10</span>
-                </div>
-                <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
-            </div>
-
-            <div class="panel skill-card soft-metric">
-                <div class="skill-info">
-                    <span class="skill-name">Strategic Leadership</span>
-                    <span class="skill-rating">8.8 / 10</span>
-                </div>
-                <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+            <div class="skill-mini-card">
+                <div class="skill-header-line"><span class="mini-dot color-6"></span> <h4>Soft Skills</h4></div>
+                <span class="rating-txt">9.0 Rating</span>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-container">
-        <div class="panel form-panel">
-            <h2>Initialize Project Blueprint</h2>
-            <form action="#" method="POST">
-                <div class="form-row-2col">
-                    <div class="input-container">
-                        <label for="name">Identity</label>
-                        <input type="text" id="name" placeholder="Your name" required>
-                    </div>
-                    <div class="input-container">
-                        <label for="email">Digital Mail</label>
-                        <input type="email" id="email" placeholder="name@example.com" required>
-                    </div>
-                </div>
-                <div class="input-container">
-                    <label for="message">Project Vision Architecture</label>
-                    <textarea id="message" rows="4" placeholder="Describe the system framework..." required></textarea>
-                </div>
-                <button type="submit" class="panel-submit-btn">Transmit Blueprint</button>
-            </form>
+    <section class="section-container split-layout-bottom">
+        <div class="projects-column">
+            <h3 class="grid-section-title">Projects</h3>
+            <div class="project-item-card">
+                <h4>Data Infrastructure</h4>
+                <p>Data Infrastructure optimization and conversion systems for scaled multidimensional structures.</p>
+            </div>
+            <div class="project-item-card">
+                <h4>Pattern Extraction</h4>
+                <p>Analyze and identify architectural data trends utilizing customized sorting logic arrays.</p>
+            </div>
+        </div>
+
+        <div class="contact-column">
+            <h3 class="grid-section-title">Contact</h3>
+            <div class="contact-panel-box">
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea rows="3" placeholder="Your message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-panel-container">
-            <p>&copy; 2026 Kiranmai Gangotree Yellapu. All rights reserved.</p>
-            <p class="footer-contact-info">IT Dept &bull; ANITS College &bull; <a href="mailto:kiranmai@example.com">kiranmai@example.com</a></p>
-        </div>
+        <p>Kiranmai Gangotree Yellapu &bull; 2026 Portfolio Framework</p>
     </footer>
 
 </body>
