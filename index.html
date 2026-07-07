@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Alex Morgan</title>
+    <title>Kiranmai Gangotree Yellapu | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav class="navbar">
+    <div class="aurora-orb orb-purple"></div>
+    <div class="aurora-orb orb-pink"></div>
+    <div class="aurora-orb orb-cyan"></div>
+
+    <nav class="glass-navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">Portfolio.</a>
+            <a href="#home" class="logo">KGY<span class="pulse-dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -24,113 +28,118 @@
         </div>
     </nav>
 
-    <section id="home" class="hero-section">
+    <header id="home" class="hero-panel">
         <div class="hero-content">
-            <p class="hero-subtitle">Welcome to my professional space</p>
-            <h1>Alex Morgan</h1>
-            <p class="hero-info">III B.Tech Computer Science & Engineering | ANITS</p>
-            <p class="hero-tagline">Building modern, scalable, and user-centric web applications with passion.</p>
-            <a href="#contact" class="btn-primary">Get In Touch</a>
+            <div class="cyber-badge">✨ Specialized in Data Mining & Warehousing</div>
+            <h1>Kiranmai Gangotree Yellapu</h1>
+            <p class="hero-subtitle">III B.Tech Information Technology | ANITS</p>
+            <p class="hero-tagline">Architecting intelligent data pipelines, extracting hidden patterns, and designing highly responsive visual interfaces.</p>
+            <div class="hero-btn-container">
+                <a href="#projects" class="btn-glow-primary">Explore My Creations</a>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <section id="about" class="about-section">
-        <div class="container">
+    <section id="about" class="section-container">
+        <div class="panel about-panel">
             <h2>About Me</h2>
-            <p>Hello! I am an aspiring software engineer specializing in modern web development frameworks. Currently pursuing my B.Tech degree, I am heavily focused on writing <strong>clean, semantic, and highly maintainable code</strong>. I enjoy problem-solving and transforming complex requirements into smooth digital experiences.</p>
-            <p>Over the past few years, I have actively participated in multiple hackathons and technical projects. I thrive in <em>collaborative team environments</em> where I can continuously learn, share knowledge, and push the boundaries of what is possible on the web. My goal is to craft software that is not only functional but <mark>beautifully designed</mark>.</p>
+            <div class="panel-interior">
+                <p>Hello! I am an analytical and forward-thinking Information Technology student with a core technical focus on <strong>Data Mining, OLAP Cubes, and Advanced Data Warehousing Systems</strong>. I don't just study data; I transform raw, chaotic datasets into meaningful structural architectures that businesses can leverage for predictive decision-making.</p>
+                <p>Beyond backend mathematical structures, I possess a deep love for structural web design. I blend logic and creativity to ensure that complex analytical dashboards are presented through <em>breath-taking, intuitive, and pixel-perfect</em> interfaces. My goal is to build <mark>intelligent software</mark> that makes data human-readable and beautiful.</p>
+            </div>
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Technical Skills</h3>
-                    <div class="badges-container">
-                        <span class="badge">HTML5 & CSS3</span>
-                        <span class="badge">JavaScript (ES6+)</span>
-                        <span class="badge">React.js</span>
-                        <span class="badge">Node.js</span>
-                        <span class="badge">Python</span>
-                        <span class="badge">Git & GitHub</span>
-                    </div>
+    <section id="skills" class="section-container">
+        <h2 class="section-title-center">Core Arsenal</h2>
+        <div class="panels-grid-2x2">
+            <div class="panel skill-panel tech-glow">
+                <h3>Technical Stack & Mining</h3>
+                <div class="badge-mesh">
+                    <span class="hologram-badge">Data Mining</span>
+                    <span class="hologram-badge">ETL Pipelines</span>
+                    <span class="hologram-badge">SQL / NoSQL</span>
+                    <span class="hologram-badge">Python</span>
+                    <span class="hologram-badge">HTML5 & CSS3</span>
+                    <span class="hologram-badge">JavaScript (ES6)</span>
                 </div>
-                <div class="skills-category">
-                    <h3>Soft Skills</h3>
-                    <div class="badges-container">
-                        <span class="badge soft-badge">Problem Solving</span>
-                        <span class="badge soft-badge">Teamwork</span>
-                        <span class="badge soft-badge">Effective Communication</span>
-                        <span class="badge soft-badge">Time Management</span>
-                        <span class="badge soft-badge">Adaptability</span>
-                        <span class="badge soft-badge">Critical Thinking</span>
-                    </div>
+            </div>
+            <div class="panel skill-panel soft-glow">
+                <h3>Analytical Mindset</h3>
+                <div class="badge-mesh">
+                    <span class="hologram-badge cyan-variant">Pattern Extraction</span>
+                    <span class="hologram-badge cyan-variant">Statistical Modeling</span>
+                    <span class="hologram-badge cyan-variant">Critical Thinking</span>
+                    <span class="hologram-badge cyan-variant">Agile Teamwork</span>
+                    <span class="hologram-badge cyan-variant">Problem Solving</span>
+                    <span class="hologram-badge cyan-variant">Data Storytelling</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="card">
-                    <div class="card-body">
-                        <h3>E-Commerce Dashboard</h3>
-                        <p>A comprehensive web dashboard tracking real-time sales metrics, item stock updates, and inventory graphs using chart frameworks.</p>
-                        <a href="#" class="card-link">View Project &rarr;</a>
-                    </div>
+    <section id="projects" class="section-container">
+        <h2 class="section-title-center">Selected Artifacts</h2>
+        <div class="panels-grid-2x2">
+            <div class="panel project-card">
+                <div class="card-header">
+                    <span class="card-meta">Data Infrastructure</span>
+                    <h3>Predictive Warehousing Analytics</h3>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Weather Track Application</h3>
-                        <p>A sleek, responsive application leveraging dynamic APIs to pull real-time meteorological conditions based on localized user data.</p>
-                        <a href="#" class="card-link">View Project &rarr;</a>
-                    </div>
+                <p>Designed an end-to-end multi-dimensional schema optimizing ETL flows and query speeds across massive, historically unorganized demographic storage sets.</p>
+                <div class="card-footer">
+                    <a href="#" class="panel-action-link">Launch Demo &rarr;</a>
+                </div>
+            </div>
+            <div class="panel project-card">
+                <div class="card-header">
+                    <span class="card-meta">Data Mining Application</span>
+                    <h3>Pattern Extraction Neural Mesh</h3>
+                </div>
+                <p>A web dashboard running pattern-mining algorithm models to predict structural trends in high-volume user behavior data arrays.</p>
+                <div class="card-footer">
+                    <a href="#" class="panel-action-link">Launch Demo &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="form-wrapper">
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+    <section id="contact" class="section-container">
+        <div class="panel form-panel">
+            <h2>Initialize Project Blueprint</h2>
+            <form action="#" method="POST" class="interactive-panel-form">
+                <div class="form-row-2col">
+                    <div class="input-container">
+                        <label for="name">Identity</label>
+                        <input type="text" id="name" placeholder="Your name" required>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    <div class="input-container">
+                        <label for="email">Digital Mail</label>
+                        <input type="email" id="email" placeholder="name@example.com" required>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
-            </div>
+                </div>
+                <div class="input-container">
+                    <label for="phone">Secure Phone Line</label>
+                    <input type="tel" id="phone" placeholder="+91 XXXXX-XXXXX">
+                </div>
+                <div class="input-container">
+                    <label for="message">Project Vision Architecture</label>
+                    <textarea id="message" rows="5" placeholder="Describe the system framework we are engineering..." required></textarea>
+                </div>
+                <button type="submit" class="panel-submit-btn">Transmit Blueprint</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 Alex Morgan. All rights reserved.</p>
+        <div class="footer-panel-container">
+            <p class="copyright">&copy; 2026 Kiranmai Gangotree Yellapu. All rights reserved.</p>
             
-            <address class="footer-address">
-                Email: <a href="mailto:alex.morgan@email.com">alex.morgan@email.com</a><br>
-                Visakhapatnam, Andhra Pradesh, India
+            <address class="footer-contact-info">
+                IT Dept &bull; ANITS College &bull; <a href="mailto:kiranmai@example.com">kiranmai@example.com</a>
             </address>
 
-            <div class="social-links">
+            <div class="hologram-socials">
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
