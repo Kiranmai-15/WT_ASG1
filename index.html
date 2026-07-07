@@ -1,331 +1,185 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Portfolio | Kiranmai Gangotree Yellapu</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        body{
-            background:#f5f5f5;
-            color:#333;
-            line-height:1.6;
-        }
-
-        nav{
-            background:#222;
-            position:sticky;
-            top:0;
-        }
-
-        nav ul{
-            list-style:none;
-            display:flex;
-            justify-content:center;
-        }
-
-        nav ul li{
-            margin:15px;
-        }
-
-        nav ul li a{
-            color:white;
-            text-decoration:none;
-            font-weight:bold;
-        }
-
-        nav ul li a:hover{
-            color:gold;
-        }
-
-        section{
-            padding:50px;
-        }
-
-        #home{
-            text-align:center;
-            background:#4a90e2;
-            color:white;
-        }
-
-        #home img{
-            width:150px;
-            height:150px;
-            border-radius:50%;
-            margin-top:20px;
-        }
-
-        h2{
-            margin-bottom:20px;
-            color:#4a90e2;
-        }
-
-        .skills{
-            display:flex;
-            gap:40px;
-            flex-wrap:wrap;
-        }
-
-        .box{
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-            flex:1;
-        }
-
-        .projects{
-            display:flex;
-            gap:20px;
-            flex-wrap:wrap;
-        }
-
-        .card{
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            width:300px;
-            box-shadow:0 0 10px rgba(0,0,0,0.2);
-        }
-
-        .card a{
-            display:inline-block;
-            margin-top:10px;
-            background:#4a90e2;
-            color:white;
-            padding:8px 15px;
-            text-decoration:none;
-            border-radius:5px;
-        }
-
-        form{
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            width:60%;
-            margin:auto;
-        }
-
-        label{
-            display:block;
-            margin-top:15px;
-        }
-
-        input,textarea{
-            width:100%;
-            padding:10px;
-            margin-top:5px;
-        }
-
-        button{
-            margin-top:20px;
-            padding:10px 20px;
-            background:#4a90e2;
-            color:white;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-        }
-
-        footer{
-            background:#222;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
-
-        footer a{
-            color:gold;
-            text-decoration:none;
-            margin:0 10px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Navigation -->
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Portfolio</div>
 
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- Hero Section -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
 
-<section id="home">
-    <h1> Yellapu Kiranmai Gangotree</h1>
+        <div class="hero-text">
+            <h1>Kiranmai Gangotree Yellapu</h1>
 
-    <p>
-        Information technology Student | ANITS College
-    </p>
+            <p>
+                Information Technology Student <br>
+                ANITS College
+            </p>
 
-    <p>
-        Passionate about Web Development, AI and Creative Designing.
-    </p>
+            <p class="tagline">
+                Specialization in Data Warehouse and Data Mining
+            </p>
 
-    <img src="profile.jpg" alt="Profile Photo">
-</section>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
 
-<!-- About -->
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Kiranmai Gangotree Yellapu">
+        </div>
 
-<section id="about">
+    </section>
 
-<h2>About Me</h2>
+    <!-- About -->
+    <section id="about">
 
-<p>
-Hello! I am a Computer Science Engineering student at <strong>ANITS College</strong>.
-I enjoy learning new technologies and creating innovative web applications.
-</p>
+        <h2>About Me</h2>
 
-<p>
-I am interested in <em>Artificial Intelligence</em>, Web Development and UI Design.
-I always try to improve my technical knowledge and communication skills.
-</p>
+        <p>
+            Hello! I'm <strong>Kiranmai Gangotree Yellapu</strong>, an
+            <strong>Information Technology</strong> student at
+            <strong>ANITS College</strong>.
+        </p>
 
-<p>
-My goal is to become a successful software engineer and build
-<mark>creative and useful applications</mark>.
-</p>
+        <p>
+            My specialization is <mark>Data Warehouse and Data Mining</mark>.
+            I enjoy learning new technologies, developing websites, and improving my programming skills.
+        </p>
 
-</section>
+        <p>
+            I believe in <em>continuous learning, teamwork, and creativity</em>.
+            My goal is to build innovative software solutions that solve real-world problems.
+        </p>
 
-<!-- Skills -->
+    </section>
 
-<section id="skills">
+    <!-- Skills -->
+    <section id="skills">
 
-<h2>Skills</h2>
+        <h2>My Skills</h2>
 
-<div class="skills">
+        <div class="skills-container">
 
-<div class="box">
-<h3>Technical Skills</h3>
+            <div class="skill-box">
+                <h3>Technical Skills</h3>
 
-<ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>Java</li>
-<li>Python</li>
-<li>C Programming</li>
-<li>SQL</li>
-</ul>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C Programming</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
 
-</div>
+            <div class="skill-box">
+                <h3>Soft Skills</h3>
 
-<div class="box">
+                <ul>
+                    <li>Communication</li>
+                    <li>Leadership</li>
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                    <li>Time Management</li>
+                    <li>Creativity</li>
+                </ul>
+            </div>
 
-<h3>Soft Skills</h3>
+        </div>
 
-<ul>
-<li>Communication</li>
-<li>Leadership</li>
-<li>Problem Solving</li>
-<li>Teamwork</li>
-<li>Creativity</li>
-<li>Time Management</li>
-</ul>
+    </section>
 
-</div>
+    <!-- Projects -->
+    <section id="projects">
 
-</div>
+        <h2>Projects</h2>
 
-</section>
+        <div class="project-container">
 
-<!-- Projects -->
+            <div class="card">
+                <h3>Mind Controlled Home Automation</h3>
 
-<section id="projects">
+                <p>
+                    A Brain Computer Interface project that controls home appliances using EEG signals.
+                </p>
 
-<h2>Projects</h2>
+                <a href="#">View Project</a>
+            </div>
 
-<div class="projects">
+            <div class="card">
+                <h3>Personal Portfolio Website</h3>
 
-<div class="card">
+                <p>
+                    A responsive portfolio website developed using HTML5 and CSS3.
+                </p>
 
-<h3>Mind Controlled Home Automation</h3>
+                <a href="#">View Project</a>
+            </div>
 
-<p>
-A Brain Computer Interface project that controls electrical devices using EEG signals.
-</p>
+        </div>
 
-<a href="#">View Project</a>
+    </section>
 
-</div>
+    <!-- Contact -->
+    <section id="contact">
 
-<div class="card">
+        <h2>Contact Me</h2>
 
-<h3>Personal Portfolio Website</h3>
+        <form>
 
-<p>
-Designed and developed a responsive personal portfolio using HTML and CSS.
-</p>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
 
-<a href="#">View Project</a>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
 
-</div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
 
-</div>
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message"></textarea>
 
-</section>
+            <button type="submit">Send</button>
 
-<!-- Contact -->
+        </form>
 
-<section id="contact">
+    </section>
 
-<h2>Contact Me</h2>
+    <!-- Footer -->
+    <footer>
 
-<form>
+        <p>&copy; 2026 Kiranmai Gangotree Yellapu. All Rights Reserved.</p>
 
-<label for="name">Name</label>
-<input type="text" id="name" required>
+        <p>
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
 
-<label for="email">Email</label>
-<input type="email" id="email" required>
-
-<label for="phone">Phone</label>
-<input type="tel" id="phone">
-
-<label for="message">Message</label>
-<textarea id="message" rows="5"></textarea>
-
-<button type="submit">Submit</button>
-
-</form>
-
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-<p>&copy; 2026 Akishu Yellapu Kiranmai Gangotree. All Rights Reserved.</p>
-
-<p>
-
-<a href="https://instagram.com" target="_blank">Instagram</a> |
-
-<a href="https://linkedin.com" target="_blank">LinkedIn</a>
-
-</p>
-
-<address>
-
-Email: kishu@example.com<br>
-Visakhapatnam, Andhra Pradesh
-
-</address>
-
-</footer>
+    </footer>
 
 </body>
+
 </html>
+```
