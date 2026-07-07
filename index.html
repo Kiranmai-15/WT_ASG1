@@ -1,117 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiranmai Gangotree Yellapu | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Kiranmai Gangotree Yellapu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
+  <nav>
+    <a href="#home" class="nav-logo">
+      <img src="logo.png" alt="ANITS Logo">
+      <span class="nav-title">ANITS</span>
+    </a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div class="light-orb orb-1"></div>
-    <div class="light-orb orb-2"></div>
-    <div class="light-orb orb-3"></div>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="brand-side">
-                <img src="https://anits.edu.in/images/logo.png" alt="ANITS" class="college-logo">
-                <span class="logo-text">KGY<span>.</span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main id="home" class="hero-dashboard section-container">
-        <div class="dashboard-panel left-panel">
-            <ul class="popping-bullets">
-                <li><span class="bullet-dot pink-dot"></span> Data Mining</li>
-                <li><span class="bullet-dot purple-dot"></span> Warehousing Specialization</li>
-                <li><span class="bullet-dot cyan-dot"></span> Pattern Extraction</li>
-                <li><span class="bullet-dot blue-dot"></span> OLAP Cubes</li>
-                <li><span class="bullet-dot violet-dot"></span> Predictive Analytics</li>
-            </ul>
-        </div>
-
-        <div class="dashboard-panel right-panel">
-            <div class="profile-frame">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="Kiranmai" class="profile-img">
-            </div>
-            <h2>Kiranmai</h2>
-            <p class="profile-sub">III B.Tech IT, ANITS</p>
-            <span class="specialized-pill">Specialized</span>
-            <p class="tagline">Extracting knowledge from data frameworks.</p>
-        </div>
-    </main>
-
-    <section id="skills" class="section-container">
-        <h3 class="grid-section-title">Skills</h3>
-        <div class="skills-row-grid">
-            <div class="skill-mini-card">
-                <div class="skill-header-line"><span class="mini-dot color-1"></span> <h4>Java</h4></div>
-                <span class="rating-txt">8.5 Rating</span>
-            </div>
-            <div class="skill-mini-card">
-                <div class="skill-header-line"><span class="mini-dot color-2"></span> <h4>C++</h4></div>
-                <span class="rating-txt">8.0 Rating</span>
-            </div>
-            <div class="skill-mini-card">
-                <div class="skill-header-line"><span class="mini-dot color-3"></span> <h4>C</h4></div>
-                <span class="rating-txt">9.0 Rating</span>
-            </div>
-            <div class="skill-mini-card">
-                <div class="skill-header-line"><span class="mini-dot color-4"></span> <h4>DSA</h4></div>
-                <span class="rating-txt">8.5 Rating</span>
-            </div>
-            <div class="skill-mini-card">
-                <div class="skill-header-line"><span class="mini-dot color-5"></span> <h4>ADS</h4></div>
-                <span class="rating-txt">8.0 Rating</span>
-            </div>
-            <div class="skill-mini-card">
-                <div class="skill-header-line"><span class="mini-dot color-6"></span> <h4>Soft Skills</h4></div>
-                <span class="rating-txt">9.0 Rating</span>
-            </div>
-        </div>
+  <main class="container">
+    
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <span class="intro">Hi There, I'm</span>
+        <h1>Kiranmai Gangotree Yellapu</h1>
+        <p class="hero-subtitle">I am a passionate 3rd-year IT student specializing in modern web development and data-driven solutions.</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+      </div>
+      <div class="hero-photo">
+        <img src="profile.jpg" alt="Profile photo of Kiranmai Gangotree Yellapu">
+      </div>
     </section>
 
-    <section class="section-container split-layout-bottom">
-        <div class="projects-column">
-            <h3 class="grid-section-title">Projects</h3>
-            <div class="project-item-card">
-                <h4>Data Infrastructure</h4>
-                <p>Data Infrastructure optimization and conversion systems for scaled multidimensional structures.</p>
-            </div>
-            <div class="project-item-card">
-                <h4>Pattern Extraction</h4>
-                <p>Analyze and identify architectural data trends utilizing customized sorting logic arrays.</p>
-            </div>
-        </div>
-
-        <div class="contact-column">
-            <h3 class="grid-section-title">Contact</h3>
-            <div class="contact-panel-box">
-                <form action="#" method="POST">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea rows="3" placeholder="Your message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <p>
+        Hello! I am Kiranmai Gangotree Yellapu, a driven student currently pursuing my <strong>3rd Year Bachelor of Technology</strong>
+        in <strong>Information Technology</strong> at ANITS. My academic and technical focus is heavily specialized in 
+        <strong>Data Mining and Data Warehousing</strong>, exploring how complex datasets can be structured and mined to reveal meaningful patterns.
+      </p>
+      <p>
+        Beyond my analytical data interests, I am captivated by turning structural logic into beautiful, intuitive user experiences. I actively look to blend backend data engineering workflows with modern front-end design elements.
+      </p>
     </section>
 
-    <footer>
-        <p>Kiranmai Gangotree Yellapu &bull; 2026 Portfolio Framework</p>
-    </footer>
+    <section id="skills" class="skills-section">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Data Mining</li>
+        <li>Data Warehousing</li>
+        <li>SQL & Databases</li>
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Bootstrap</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>Virtual Placement Cell</h3>
+        <p>
+          A user-friendly platform that takes the stress out of campus recruiting by keeping job alerts, resumes, and interview schedules all in one place, making it easier for students to connect with employers and land great jobs.
+        </p>
+        <a href="#" class="btn-secondary">View Project</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message..." required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
 
 </body>
 </html>
