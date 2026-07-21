@@ -1,310 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiranmai Gangotree Yellapu | Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Student Registration Form</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Link CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
+    <div class="container">
 
-        <div class="logo">
+        <h1>Student Registration Form</h1>
 
-            <img src="logo.png" alt="ANITS Logo">
+        <!-- Success Message -->
+        <div id="successMessage" class="success">
+            Registration Successful!
+        </div>
 
-            <div class="college-name">
-                <h3>ANITS</h3>
-                <p>Anil Neerukonda Institute of Technology and Sciences</p>
+        <form id="registrationForm">
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input 
+                    type="text" 
+                    id="fullName" 
+                    placeholder="Enter your full name"
+                >
+                <span class="error" id="nameError"></span>
             </div>
 
-        </div>
-
-        <ul>
-
-            <li><a href="#home">Home</a></li>
-
-            <li><a href="#about">About</a></li>
-
-            <li><a href="#skills">Skills</a></li>
-
-            <li><a href="#projects">Projects</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-        </ul>
-
-    </nav>
-
-    <!-- Hero Section -->
-
-    <section id="home" class="hero">
-
-        <div class="hero-content">
-
-            <h4>Hello, I'm</h4>
-
-            <h1>Kiranmai Gangotree Yellapu</h1>
-
-            <h3>Information Technology Student</h3>
-
-            <p>
-
-                Specialization in
-                <strong>Data Warehouse and Data Mining</strong>.
-
-                Passionate about web development, designing responsive
-                websites and learning emerging technologies.
-
-            </p>
-
-            <a href="#contact" class="btn">
-                Contact Me
-            </a>
-
-        </div>
-
-        <div class="hero-image">
-
-            <img src="profile.jpg" alt="Kiranmai">
-
-        </div>
-
-    </section>
-
-    <!-- About -->
-
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <p>
-
-            Hello! I'm
-            <strong>Kiranmai Gangotree Yellapu</strong>,
-            pursuing my Bachelor of Technology in
-            <strong>Information Technology</strong>
-            at
-            <strong>Anil Neerukonda Institute of Technology and Sciences (ANITS)</strong>.
-
-        </p>
-
-        <p>
-
-            My specialization is
-            <mark>Data Warehouse and Data Mining</mark>.
-            I enjoy learning modern technologies,
-            building responsive websites,
-            and solving real-world problems through programming.
-
-        </p>
-
-        <p>
-
-            I always believe in continuous learning,
-            teamwork and creativity.
-            My goal is to become a successful software engineer
-            and contribute to innovative technology.
-
-        </p>
-
-    </section>
-
-    <!-- Skills -->
-
-    <section id="skills">
-
-        <h2>Technical Skills</h2>
-
-        <div class="skills">
-
-            <div class="box">
-
-                <h3>Programming</h3>
-
-                <ul>
-
-                    <li>HTML5</li>
-
-                    <li>CSS3</li>
-
-                    <li>Java</li>
-
-                    <li>Python</li>
-
-                    <li>C Programming</li>
-
-                    <li>SQL</li>
-
-                </ul>
-
+            <!-- Roll Number -->
+            <div class="form-group">
+                <label for="rollNumber">Roll Number</label>
+                <input 
+                    type="text" 
+                    id="rollNumber" 
+                    placeholder="Enter your roll number"
+                >
+                <span class="error" id="rollError"></span>
             </div>
 
-            <div class="box">
-
-                <h3>Professional Skills</h3>
-
-                <ul>
-
-                    <li>Communication</li>
-
-                    <li>Leadership</li>
-
-                    <li>Team Work</li>
-
-                    <li>Problem Solving</li>
-
-                    <li>Time Management</li>
-
-                    <li>Creativity</li>
-
-                </ul>
-
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input 
+                    type="text" 
+                    id="email" 
+                    placeholder="Enter your email"
+                >
+                <span class="error" id="emailError"></span>
             </div>
 
-        </div>
+            <!-- Mobile Number -->
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input 
+                    type="text" 
+                    id="mobile" 
+                    placeholder="Enter 10-digit mobile number"
+                >
+                <span class="error" id="mobileError"></span>
+            </div>
 
-    </section>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Enter password"
+                >
+                <span class="error" id="passwordError"></span>
+            </div>
 
-    <!-- Projects -->
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input 
+                    type="password" 
+                    id="confirmPassword" 
+                    placeholder="Confirm your password"
+                >
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
 
-    <section id="projects">
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender</label>
 
-        <h2>Projects</h2>
+                <div class="gender-options">
 
-        <div class="project-grid">
+                    <label>
+                        <input 
+                            type="radio" 
+                            name="gender" 
+                            value="Male"
+                        >
+                        Male
+                    </label>
 
-            <div class="card">
+                    <label>
+                        <input 
+                            type="radio" 
+                            name="gender" 
+                            value="Female"
+                        >
+                        Female
+                    </label>
 
-                <h3>Mind Controlled Home Automation</h3>
+                    <label>
+                        <input 
+                            type="radio" 
+                            name="gender" 
+                            value="Other"
+                        >
+                        Other
+                    </label>
 
-                <p>
+                </div>
 
-                    Developed a Brain Computer Interface
-                    based smart home automation system
-                    using EEG signals.
+                <span class="error" id="genderError"></span>
+            </div>
 
-                </p>
+            <!-- Department -->
+            <div class="form-group">
 
-                <a href="#" class="project-btn">
+                <label for="department">
+                    Department
+                </label>
 
-                    View Project
+                <select id="department">
 
-                </a>
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option value="CSE">
+                        Computer Science and Engineering
+                    </option>
+
+                    <option value="ECE">
+                        Electronics and Communication Engineering
+                    </option>
+
+                    <option value="EEE">
+                        Electrical and Electronics Engineering
+                    </option>
+
+                    <option value="MECH">
+                        Mechanical Engineering
+                    </option>
+
+                    <option value="CIVIL">
+                        Civil Engineering
+                    </option>
+
+                    <option value="IT">
+                        Information Technology
+                    </option>
+
+                </select>
+
+                <span class="error" id="departmentError"></span>
 
             </div>
 
-            <div class="card">
+            <!-- Date of Birth -->
+            <div class="form-group">
 
-                <h3>Personal Portfolio Website</h3>
+                <label for="dob">
+                    Date of Birth
+                </label>
 
-                <p>
+                <input 
+                    type="date" 
+                    id="dob"
+                >
 
-                    Designed and developed
-                    a responsive portfolio website
-                    using HTML and CSS.
-
-                </p>
-
-                <a href="#" class="project-btn">
-
-                    View Project
-
-                </a>
+                <span class="error" id="dobError"></span>
 
             </div>
 
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-
-    <section id="contact">
-
-        <h2>Contact Me</h2>
-
-        <form>
-
-            <label>Name</label>
-
-            <input type="text"
-                placeholder="Enter your name"
-                required>
-
-            <label>Email</label>
-
-            <input type="email"
-                placeholder="Enter your email"
-                required>
-
-            <label>Phone</label>
-
-            <input type="tel"
-                placeholder="Enter your phone number">
-
-            <label>Message</label>
-
-            <textarea rows="5"
-                placeholder="Write your message"></textarea>
-
+            <!-- Submit Button -->
             <button type="submit">
-
-                Send Message
-
+                Register
             </button>
 
         </form>
 
-    </section>
+    </div>
 
-    <!-- Footer -->
-
-    <footer>
-
-        <p>
-
-            © 2026
-            Kiranmai Gangotree Yellapu
-
-        </p>
-
-        <div class="social">
-
-            <a href="https://instagram.com"
-                target="_blank">
-
-                Instagram
-
-            </a>
-
-            <a href="https://linkedin.com"
-                target="_blank">
-
-                LinkedIn
-
-            </a>
-
-            <a href="https://github.com"
-                target="_blank">
-
-                GitHub
-
-            </a>
-
-        </div>
-
-    </footer>
+    <!-- Link JavaScript File -->
+    <script src="script.js"></script>
 
 </body>
-
 </html>
